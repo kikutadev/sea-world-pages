@@ -7,25 +7,31 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23012432%27/%3E%3Ctext x=%275%27 y=%2724%27 font-size=%2723%27 fill=%27%23a4e8e9%27%3E%CE%A6%3C/text%3E%3C/svg%3E">
   <meta name="description" content="魚と出会いながら水中を泳ぐ。一人称の海洋探索プレビュー。" />
   <title>SEA WORLD — 水中フィールドカメラ</title>
-  <script type="module" crossorigin src="/sea-world-pages/assets/index-BummG6_I.js"></script>
-  <link rel="stylesheet" crossorigin href="/sea-world-pages/assets/index-D0KfObsV.css">
+  <script type="module" crossorigin src="/sea-world-pages/assets/index-BjcUtUDw.js"></script>
+  <link rel="stylesheet" crossorigin href="/sea-world-pages/assets/index-CBkXjglD.css">
 </head>
 <body>
   <div id="viewport">
     <div class="hud topline">
-      <span class="brand">SEA WORLD</span>
-      <span class="rec" id="timecode">00:00:00</span>
+      <div class="brand"><b>SEA / WORLD</b><span>UNDERWATER FIELD CAMERA</span></div>
+      <div class="rec"><div><i class="rec-dot"></i>LIVE</div><span id="timecode">00:00:00</span></div>
     </div>
-    <div class="focus" aria-hidden="true"><i class="center"></i></div>
-    <button type="button" class="shutter" id="shutter" aria-label="写真を撮る" title="PHOTO">◎</button>
+    <div class="depth-scale" aria-hidden="true"><i></i></div>
+    <div class="focus" aria-hidden="true">
+      <i class="corner tl"></i><i class="corner tr"></i>
+      <i class="corner bl"></i><i class="corner br"></i>
+      <i class="center"></i>
+    </div>
+    <button type="button" class="shutter" id="shutter" aria-label="写真を撮る" title="PHOTO"><span>◎</span> PHOTO</button>
     <button type="button" class="help-toggle" id="help-toggle" aria-expanded="false" aria-controls="help-panel" aria-label="操作方法を表示">?</button>
     <div class="help-panel" id="help-panel" hidden>PC：WASD / 矢印で移動、ドラッグで見回す<br>Space / E で浮上、C / Q で潜水、Shift で加速<br>スマホ：左スティックで移動、ドラッグで見回す<br>UP / DN を長押しして上下移動</div>
     <div class="hud bottom">
       <div class="stat">
-        <b id="depth">--.-</b><span class="unit">m</span>
-        <span class="sub">HDG <span id="heading">---°</span> · <span id="speed">0.0</span>m/s</span>
+        <label>DEPTH / 深度</label>
+        <div class="value"><b id="depth">--.-</b><span class="unit">m</span></div>
+        <div class="sub">HDG <span id="heading">---°</span> · <span id="speed">0.0</span> m/s</div>
       </div>
-      <div id="nearest">魚を探索中</div>
+      <div class="subject"><label>NEAREST SUBJECT</label><div id="nearest">魚を探索中</div></div>
       <div id="fishCount">SUBJECTS // --</div>
     </div>
     <div class="touch-controls" id="touch-controls">
